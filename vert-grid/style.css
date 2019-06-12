@@ -1,0 +1,124 @@
+/* Import */
+@import url(./reset.css);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700,900|Noto+Serif+JP:300,400,700,900|Roboto+Mono:400,400i,700,700i&display=swap);
+
+/* Variable */
+:root {
+  --accent-color: #f33;
+  --base-color: #333;
+  --base-font-size: 16px;
+  --dark-gray-color: #888;
+  --light-gray-color: #ccc;
+  --white-color: #fff;
+  --vert-grid-size: calc(var(--base-font-size) * 2);
+  --vert-harf-size: var(--base-font-size);
+}
+
+/* Debug */
+.debug {
+  background: repeating-linear-gradient(#fcc 0, #fcc 32px, #fff 32px, #fff 64px);
+  height: calc(var(--vert-grid-size) * 40);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -5;
+}
+
+/* Setting */
+html {
+  color: var(--base-color);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: var(--base-font-size);
+  font-weight: 400;
+  line-height: var(--vert-grid-size);
+  vertical-align:baseline;
+}
+
+/* Text */
+h1 {
+  font-size: calc(var(--base-font-size) * 6);
+  font-weight: 700;
+  line-height: calc(var(--vert-grid-size) * 4);
+}
+
+h2 {
+  font-size: calc(var(--base-font-size) * 6);
+  font-weight: 400;
+  line-height: calc(var(--vert-grid-size) * 4);
+}
+
+h3 {
+  font-size: calc(var(--base-font-size) * 4);
+  font-weight: 700;
+  line-height: calc(var(--vert-grid-size) * 3);
+}
+
+h4 {
+  font-size: calc(var(--base-font-size) * 4);
+  font-weight: 400;
+  line-height: calc(var(--vert-grid-size) * 3);
+}
+
+h5 {
+  font-size: calc(var(--base-font-size) * 2);
+  font-weight: 700;
+  line-height: calc(var(--vert-grid-size) * 2);
+}
+
+h6 {
+  font-size: calc(var(--base-font-size) * 2);
+  font-weight: 400;
+  line-height: calc(var(--vert-grid-size) * 2);
+}
+
+p, blockquote {
+  font-size: var(--base-font-size);
+  font-weight: 400;
+  line-height: var(--vert-grid-size);
+}
+
+a {
+  color: #08f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+b {
+  font-weight: 900;
+}
+
+em {
+  color: var(--accent-color);
+  font-style: normal;
+}
+
+li {
+  font-size: calc(var(--base-font-size) * 3 / 4);
+  line-height: calc(var(--vert-grid-size) * 3 / 4);
+}
+
+small {
+  color: var(--light-gray-color);
+}
+
+strong {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  font-weight: 900;
+}
+
+pre, code, var {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+}
+
+q:before {
+    content: open-quote;
+}
+
+q:after {
+    content: close-quote;
+}
