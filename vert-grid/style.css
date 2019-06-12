@@ -15,13 +15,11 @@
 }
 
 /* Debug */
-.debug {
+html {
   background: repeating-linear-gradient(#fcc 0, #fcc 32px, #fff 32px, #fff 64px);
-  height: calc(var(--vert-grid-size) * 40);
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: -5;
 }
 
 /* Setting */
