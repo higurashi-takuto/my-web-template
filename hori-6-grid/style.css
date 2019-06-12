@@ -1,0 +1,62 @@
+/* Import */
+@import url(./reset.css);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700,900|Noto+Serif+JP:300,400,700,900|Roboto+Mono:400,400i,700,700i&display=swap);
+
+/* Variable */
+:root {
+  --accent-color: #f33;
+  --base-color: #333;
+  --dark-gray-color: #888;
+  --light-gray-color: #ccc;
+  --white-color: #fff;
+  --container-margin-size: 16px;
+}
+
+/* Debug */
+.col {
+  background: #fcc;
+}
+
+/* Setting */
+html {
+  color: var(--base-color);
+  font-family: 'Noto Sans JP', sans-serif;
+  vertical-align:baseline;
+}
+
+.container:after,
+.row:after, 
+.col:after { 
+  content: ""; 
+  display: table; 
+  clear: both; 
+}
+
+.container {
+  margin: 0 auto; 
+}
+
+.col { 
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+@media (min-width : 768px) {
+  .col {margin-left: 2%;}
+  .col:first-child {margin-left: 0;}
+  .grid-1 {width: 15%;}
+  .grid-2 {width: 32%;}
+  .grid-3 {width: 49%;}
+  .grid-4 {width: 66%;}
+  .grid-5 {width: 83%;}
+  .grid-6 {width: 100%;}
+}
+
+@media ( max-width: 1023px) {
+  .container {max-width: calc(100% - var(--container-margin-size) * 2);}
+}
+
+@media (min-width: 1024px) {
+  .container {max-width: calc(1024px - var(--container-margin-size) * 2);}
+}
