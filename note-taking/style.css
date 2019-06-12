@@ -1,0 +1,134 @@
+/* Import */
+@import url(./reset.css);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700,900|Noto+Serif+JP:300,400,700,900|Roboto+Mono:400,400i,700,700i&display=swap);
+
+/* Fonts */
+@font-face {
+  font-family: 'Handwritten';
+  font-style: normal;
+  src: url('./handwritten.woff2') format("woff2"),
+       url('./handwritten.woff') format("woff"),
+       url('./handwritten.otf') format("opentype");
+}
+
+/* Variable */
+:root {
+  --base-color: #333;
+  --base-font-size: 16px;
+  --blue-color: #33f;
+  --dark-gray-color: #888;
+  --light-gray-color: #ccc;
+  --pink-color: #f8f;
+  --red-color: #f33;
+  --white-color: #fff;
+  --vert-grid-size: calc(var(--base-font-size) * 2);
+  --vert-harf-size: var(--base-font-size);
+  --yellow-color: #ff8;
+}
+
+/* Debug */
+html {
+  background: repeating-linear-gradient(#fff 0, #fff 30px, #ccc 30px, #ccc 32px);;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Setting */
+* {
+  font-family: 'Handwritten','Noto Sans JP', sans-serif;
+}
+html {
+  color: var(--base-color);
+  font-size: var(--base-font-size);
+  font-weight: 400;
+  line-height: var(--vert-grid-size);
+  vertical-align:baseline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: var(--vert-grid-size) 0;
+}
+
+/* Text */
+h1 {
+  color: var(--red-color);
+  font-size: calc(var(--base-font-size) * 2);
+  font-weight: 700;
+  line-height: calc(var(--vert-grid-size) * 2);
+}
+
+h2 {
+  color: var(--blue-color);
+  font-size: calc(var(--base-font-size) * 2);
+  font-weight: 700;
+  line-height: calc(var(--vert-grid-size) * 2);
+}
+
+h3 {
+  font-size: calc(var(--base-font-size) * 2);
+  font-weight: 700;
+  line-height: calc(var(--vert-grid-size) * 2);
+}
+
+h4 {
+  font-size: calc(var(--base-font-size) * 2);
+  font-weight: 700;
+  line-height: calc(var(--vert-grid-size) * 2);
+}
+
+h5 {
+  font-size: calc(var(--base-font-size) * 2);
+  font-weight: 700;
+  line-height: calc(var(--vert-grid-size) * 2);
+}
+
+h6 {
+  font-size: calc(var(--base-font-size) * 2);
+  font-weight: 700;
+  line-height: calc(var(--vert-grid-size) * 2);
+}
+
+p, blockquote {
+  font-size: var(--base-font-size);
+  font-weight: 400;
+  line-height: var(--vert-grid-size);
+}
+
+a {
+  color: #08f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+em {
+  color: var(--red-color);
+  font-style: normal;
+  font-weight: 900;
+}
+
+li {
+  font-size: calc(var(--base-font-size) * 3 / 4);
+  line-height: calc(var(--vert-grid-size) * 3 / 4);
+}
+
+small {
+  color: var(--light-gray-color);
+}
+
+strong {
+  background-color: var(--pink-color);
+  color: var(--base-color);
+  font-weight: 900;
+}
+
+.pink {
+  background-color: var(--pink-color);
+}
+
+.yellow {
+  background-color: var(--yellow-color);
+}
