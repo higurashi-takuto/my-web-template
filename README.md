@@ -12,3 +12,7 @@ Web用のテンプレート置き場
 ## note-taking
 手書きノート風のデザイン  
 [サンプル](https://higurashi-takuto.github.io/my-web-template/note-taking/)
+
+## nuxt
+Nuxt.jsのテンプレート  
+（作成中）
