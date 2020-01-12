@@ -1,0 +1,54 @@
+/* Inline ( Initial Value ) */
+a, abbr, b, bdi, bdo, br, cite, code, data, dfn, em, i, kbd, mark, q, rb, rt, rtc, ruby, s, samp, small, span, strong, sub, sup, time, u, var, wbr, area, audio, img, map, track, video, embed, iframe, object, picture, source, canvas, noscript, del, ins, label, output, dialog, slot {
+  display: inline;
+}
+
+/* None */
+base, head, link, meta, style, title, script, rp, param, datalist, dialog:not([open]), template {
+  display: none;
+}
+
+/* Block */
+html, body, address, article, aside, footer, header, h1, h2, h3, h4, h5, h6, hgroup, main, nav, section, blockquote, dd, div, dl, dt, figcaption, figure, hr, ol, p, pre, ul, fieldset, form, legend, optgroup, option, details, menu, summary {
+  display: block;
+}
+
+/* Inline Block; */
+button, input, meter, progress, select, textarea {
+  /* display: inline block; */
+  display: inline-block;
+}
+
+/* List */
+li {
+  display: list-item;
+}
+
+/* Table */
+caption {
+    display: table-caption;
+}
+col {
+    display: table-column
+}
+colgroup {
+    display: table-column-group
+}
+table {
+    display: table;
+}
+tbody {
+    display: table-row-group;
+}
+td, th {
+    display: table-cell;
+}
+tfoot {
+    display: table-footer-group;
+}
+thead {
+    display: table-header-group;
+}
+tr {
+    display: table-row;
+}
