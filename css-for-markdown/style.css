@@ -189,7 +189,7 @@ pre code {
 
 pre, code {
   font-family: 'Roboto Mono', monospace, 'Noto Sans JP';
-  font-size: calc(var(--base-font-size) * 1.201);
+  font-size: var(--base-font-size);
   font-weight: 400;
   line-height: var(--vert-grid-size);
 }
