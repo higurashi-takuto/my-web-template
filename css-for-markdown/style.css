@@ -133,8 +133,7 @@ ul, ol {
 }
 
 li ul {
-  margin: 0 var(--vert-grid-size);
-  margin-right: 0;
+  margin: 0 0 0 var(--vert-grid-size);
 }
 
 th, td {
@@ -173,11 +172,16 @@ blockquote {
 }
 
 pre {
+  font-size: calc(var(--base-font-size) * 1.201);
+  line-height: calc(var(--vert-grid-size) * 1);
   padding: 0 var(--vert-harf-size);
   overflow: auto;
 }
 
 code {
+  display: inline-block;
+  vertical-align: top;
+  font-size: inherit;
   padding: 0 calc(var(--vert-harf-size) / 2);
   margin: 0 calc(var(--vert-harf-size) / 2);
 }
@@ -189,9 +193,7 @@ pre code {
 
 pre, code {
   font-family: 'Roboto Mono', monospace, 'Noto Sans JP';
-  font-size: var(--base-font-size);
   font-weight: 400;
-  line-height: var(--vert-grid-size);
 }
 
 hr {
