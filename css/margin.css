@@ -4,7 +4,7 @@
   --base-line-height: calc(var(--base-font-size) * 2);
 }
 
-address, article, aside, footer, header, h1, h2, h3, h4, h5, h6, hgroup, main, nav, section, blockquote, div, dl, figure, hr, ol, p, pre, ul, fieldset, form, details, menu, table {
+address, article, aside, footer, header, h1, h2, h3, h4, h5, h6, hgroup, main, nav, section, blockquote, dl, figure, hr, ol, p, pre, ul, fieldset, form, details, menu, table {
   margin: var(--base-line-height) 0;
 }
 

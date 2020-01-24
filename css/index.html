@@ -15,6 +15,7 @@
   <link rel="stylesheet" type="text/css" href="./typography.css">
   <link rel="stylesheet" type="text/css" href="./margin.css">
   <link rel="stylesheet" type="text/css" href="./color.css">
+  <link rel="stylesheet" type="text/css" href="./horizontal.css">
 
   <style>
     html {
@@ -23,10 +24,55 @@
       top: 0;
       width: 100vw;
     }
+    .grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6 {
+      /*background-color: #f55;*/
+    }
   </style>
 
 </head>
 <body>
+  <div class="container">
+    <div class="row">
+      <div class="col grid-6">
+        <p>これは<code>grid-6</code></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col grid-5">
+        <p>これは<code>grid-5</code></p>
+      </div>
+      <div class="col grid-1">
+        <p>これは<code>grid-1</code></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col grid-2">
+        <p>これは<code>grid-2</code></p>
+      </div>
+      <div class="col grid-4">
+        <p>これは<code>grid-4</code></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col grid-3">
+        <p>これは<code>grid-3</code></p>
+      </div>
+      <div class="col grid-3">
+        <p>これは<code>grid-3</code></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col grid-3">
+        <p>これは<code>grid-3</code></p>
+      </div>
+      <div class="col grid-2">
+        <p>これは<code>grid-2</code></p>
+      </div>
+      <div class="col grid-1">
+        <p>これは<code>grid-1</code></p>
+      </div>
+    </div>
+  </div>
   <address>
     <p>これは address</p>
   </address>
