@@ -5,10 +5,21 @@
 }
 
 address, article, aside, footer, header, h1, h2, h3, h4, h5, h6, hgroup, main, nav, section, blockquote, div, dl, figure, hr, ol, p, pre, ul, fieldset, form, details, menu, table {
-    margin: var(--base-line-height) 0;
+  margin: var(--base-line-height) 0;
 }
 
 ul ul, ol ul, ul ol, ol ol {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+a, abbr, b, bdi, bdo, br, cite, code, data, dfn, em, i, kbd, mark, q, ruby, s, samp, small, span, strong, sub, sup, time, u, var, wbr, area, audio, img, map, track, video, embed, iframe, object, picture, source, canvas, noscript, del, ins, label, output, dialog, slot {
+  margin: 0 calc(var(--base-line-height) / 8);
+}
+pre, code, kbd, mark {
+  padding: 0 calc(var(--base-line-height) / 4);
+}
+pre code {
+  margin: 0;
+  padding: 0;
 }

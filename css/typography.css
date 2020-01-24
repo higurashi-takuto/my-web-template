@@ -134,6 +134,10 @@ bdo {
   unicode-bidi: bidi-override;
 }
 
+data {
+  text-decoration: underline dotted;
+}
+
 data:hover:after {
   content: ' ( ' attr(value) ' ) ';
 }
