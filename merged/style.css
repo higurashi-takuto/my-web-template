@@ -1,0 +1,481 @@
+@charset "utf-8";
+/*————————————————————————————————*/
+/* Reset */
+/*————————————————————————————————*/
+* {
+  all: initial;
+  unicode-bidi: normal;
+  direction: ltr;
+}
+
+/*————————————————————————————————*/
+/* Variable */
+/*————————————————————————————————*/
+:root {
+  /* Text */
+  --base-font-size: 16px;
+  --base-line-height: calc(var(--base-font-size) * 2);
+  /* Color */
+  --color: #333;
+  --dark-color: #ccc;
+  --bg-color: #eee;
+  --dark-bg-color: #111;
+  --light-gray-color: #ddd;
+  --dark-gray-color: #222;
+  --accent-color: #f24;
+  --attention-color: #2a1;
+  --link-color: #24f;
+  /* Horizontal Grid */
+  --horizontal-margin: calc(var(--base-font-size) * 2);
+  --grid-width: calc((100% - var(--horizontal-margin) * 5) / 6);
+}
+
+/*————————————————————————————————*/
+/* Display */
+/*————————————————————————————————*/
+a, abbr, b, bdi, bdo, br, cite, code, data, dfn, em, i, kbd, mark, q, rb, rt, rtc, ruby, s, samp, small, span, strong, sub, sup, time, u, var, wbr, area, audio, img, map, track, video, embed, iframe, object, picture, source, canvas, noscript, del, ins, label, output, dialog, slot {
+  display: inline;
+}
+base, head, link, meta, style, title, script, rp, param, datalist, dialog:not([open]), template {
+  display: none;
+}
+html, body, address, article, aside, footer, header, h1, h2, h3, h4, h5, h6, hgroup, main, nav, section, blockquote, dd, div, dl, dt, figcaption, figure, hr, ol, p, pre, ul, fieldset, form, legend, optgroup, option, details, menu, summary {
+  display: block;
+}
+button, input, meter, progress, select, textarea {
+  display: inline-block;
+}
+li {
+  display: list-item;
+}
+caption {
+    display: table-caption;
+}
+col {
+    display: table-column
+}
+colgroup {
+    display: table-column-group
+}
+table {
+    display: table;
+}
+tbody {
+    display: table-row-group;
+}
+td, th {
+    display: table-cell;
+}
+tfoot {
+    display: table-footer-group;
+}
+thead {
+    display: table-header-group;
+}
+tr {
+    display: table-row;
+}
+
+/*————————————————————————————————*/
+/* Color */
+/*————————————————————————————————*/
+* {
+  border-color: var(--color);
+}
+html {
+  color: var(--color);
+  background-color: var(--bg-color);
+}
+hr {
+  background-color: var(--base-color);
+}
+pre, code, input, textarea, select {
+  background-color: var(--light-gray-color);
+}
+::selection {
+  background-color: var(--dark-gray-color);
+}
+button, input[type='submit'] {
+  color: var(--dark-color);
+  background-color: var(--link-color);
+}
+/* Light mode */
+@media(prefers-color-scheme: light) {
+  * {
+    border-color: var(--color);
+  }
+  html {
+    color: var(--color);
+    background-color: var(--bg-color);
+  }
+  hr {
+    background-color: var(--base-color);
+  }
+  pre, code, input, textarea, select {
+    background-color: var(--light-gray-color);
+  }
+  ::selection {
+    background-color: var(--dark-gray-color);
+    color: var(--light-gray-color);
+  }
+  .modal, .modal-bg:after {
+    background-color: var(--bg-color);
+  }
+}
+/* Dark mode */
+@media(prefers-color-scheme: dark) {
+  * {
+    border-color: var(--dark-color);
+  }
+  html {
+    color: var(--dark-color);
+    background-color: var(--dark-bg-color);
+  }
+  hr {
+    background-color: var(--dark-color);
+  }
+  pre, code, input, textarea, select {
+    background-color: var(--dark-gray-color);
+  }
+  ::selection {
+    background-color: var(--light-gray-color);
+    color: var(--dark-gray-color);
+  }
+  .modal, .modal-bg:after {
+    background-color: var(--dark-bg-color);
+  }
+}
+
+/*————————————————————————————————*/
+/* Typography */
+/*————————————————————————————————*/
+.sans {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.serif {
+  font-family: 'Noto Serif JP', sans-serif;
+}
+.mono {
+  font-family: 'Roboto Mono', monospace;
+}
+.w100 {
+  font-weight: 100;
+}
+.w200 {
+  font-weight: 200;
+}
+.w300 {
+  font-weight: 300;
+}
+.w400 {
+  font-weight: 400;
+}
+.w500 {
+  font-weight: 500;
+}
+.w600 {
+  font-weight: 600;
+}
+.w700 {
+  font-weight: 700;
+}
+.w800 {
+  font-weight: 800;
+}
+.w900 {
+  font-weight: 900;
+}
+.roman {
+  font-style: normal;
+}
+.italic {
+  font-style: italic;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+html {
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  font-family: 'Noto Sans JP', sans-serif;
+  vertical-align: bottom;
+}
+*:not(html) {
+  font-style: inherit;
+  font-variant: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+  color: inherit;
+}
+h1, h2, h3, h4, h5, h6, dt, a, b, samp, strong, var, th {
+  font-weight: bold;
+}
+abbr, cite, dfn, em, i, q, var {
+  font-style: italic;
+}
+pre, code, kbd, samp, time, var, output {
+  font-family: 'Roboto Mono', monospace;
+}
+h1 {
+  font-size: calc(var(--base-font-size) * 4.0000000000);
+  line-height: calc(var(--base-line-height) * 2);
+}
+h2 {
+  font-size: calc(var(--base-font-size) * 3.1748021039);
+  line-height: calc(var(--base-line-height) * 2);
+}
+h3 {
+  font-size: calc(var(--base-font-size) * 2.5198420998);
+  line-height: calc(var(--base-line-height) * 2);
+}
+h4 {
+  font-size: calc(var(--base-font-size) * 2.0000000000);
+  line-height: var(--base-line-height);
+}
+h5 {
+  font-size: calc(var(--base-font-size) * 1.5874010520);
+  line-height: var(--base-line-height);
+}
+h6 {
+  font-size: calc(var(--base-font-size) * 1.2599210499);
+  line-height: var(--base-line-height);
+}
+blockquote {
+  border-left: calc(var(--base-font-size) / 8) solid;
+  padding-left: calc(var(--base-font-size) * 7 / 16);
+  margin-left: calc(var(--base-font-size) * 7 / 16);
+}
+figure {
+  text-align: center;
+}
+hr {
+  background-clip: content-box;
+  background-color: black;
+  border: none;
+  height: 1px;
+  padding: calc(var(--base-line-height) / 2 - 0.5px) 0;
+}
+li {
+  list-style-position: inside;
+}
+ul li {
+  list-style-type: disc;
+}
+ol li {
+  list-style-type: decimal;
+}
+ul ul, ol ul, ul ol, ol ol {
+  margin-left: var(--base-font-size);
+}
+pre {
+  white-space: pre;
+}
+a {
+  color: var(--link-color);
+}
+a:hover {
+  text-decoration: underline;
+}
+abbr:hover:after {
+  content: ' ( ' attr(title) ' ) ';
+}
+bdi {
+  unicode-bidi: isolate-override;
+}
+bdo {
+  unicode-bidi: bidi-override;
+}
+data {
+  text-decoration: underline dotted;
+}
+data:hover:after {
+  content: ' ( ' attr(value) ' ) ';
+}
+kbd {
+  border: 1px solid;
+  border-radius: calc(var(--base-font-size) / 4);
+}
+mark {
+  background-color: var(--attention-color);
+}
+q:before {
+  content: '“';
+}
+q:after {
+  content: '”';
+}
+ruby > rt {
+  display: block;
+  font-size: calc(var(--base-font-size) / 2);
+  text-align: start;
+}
+ruby > rp {
+  display: none;
+}
+s, del {
+  text-decoration: line-through;
+}
+small {
+  font-size: calc(100% / 1.2599210499);
+}
+strong {
+  color: var(--accent-color);
+}
+sub {
+  font-size: calc(100% / 1.5874010520);
+  vertical-align: bottom;
+  bottom: -0.5em;
+  position: relative;
+}
+sup {
+  font-size: calc(100% / 1.5874010520);
+  vertical-align: top;
+  top: -0.5em;
+  position: relative;
+}
+u {
+  text-decoration: underline;
+}
+
+/*————————————————————————————————*/
+/* Margin */
+/*————————————————————————————————*/
+address, article, aside, footer, header, h1, h2, h3, h4, h5, h6, hgroup, main, nav, section, blockquote, dl, figure, hr, ol, p, pre, ul, fieldset, form, details, menu, table {
+  margin: var(--base-line-height) 0;
+}
+ul ul, ol ul, ul ol, ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+a, abbr, b, bdi, bdo, br, cite, code, data, dfn, em, i, kbd, mark, q, ruby, s, samp, small, span, strong, sub, sup, time, u, var, wbr, area, audio, img, map, track, video, embed, iframe, object, picture, source, canvas, noscript, del, ins, label, output, dialog, slot {
+  margin: 0 calc(var(--base-line-height) / 8);
+}
+pre, code, kbd, mark {
+  padding: 0 calc(var(--base-line-height) / 4);
+}
+pre code {
+  margin: 0;
+  padding: 0;
+}
+
+/*————————————————————————————————*/
+/* Modal */
+/*————————————————————————————————*/
+.modal-wrap {
+  z-index: 999;
+  position: fixed;
+  margin: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+.modal-wrap:target {
+  display: block;
+}
+.modal-wrap:not(:target) {
+  display: none;
+}
+.modal-wrap:after, .modal-wrap:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.modal {
+  display: inline-block;
+  position: relative;
+  max-height: calc(100% - var(--base-line-height) * 4);
+  padding: 0 var(--horizontal-margin);
+  text-align: left;
+  vertical-align: middle;
+  overflow-y: auto;
+}
+.modal-bg {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .9);
+}
+.modal-bg:after {
+  display: block;
+  content: '×';
+  position: absolute;
+  top: var(--base-font-size);
+  right: var(--base-font-size);
+  width: var(--base-line-height);
+  height: var(--base-line-height);
+  color: white;
+  border-radius: var(--base-font-size);
+}
+
+/*————————————————————————————————*/
+/* Horizontal Grid */
+/*————————————————————————————————*/
+.container:after,
+.row:after,
+.col:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container {
+  margin: 0 auto;
+}
+.col {
+  margin: 0;
+  display: block;
+  float: left;
+  width: 100%;
+}
+@media (min-width : 768px) {
+  .col {margin-left: var(--horizontal-margin);}
+  .col:first-child {margin-left: 0;}
+  .grid-1 {width: var(--grid-width);}
+  .grid-2 {width: calc(var(--grid-width) * 2 + var(--horizontal-margin));}
+  .grid-3 {width: calc(var(--grid-width) * 3 + (var(--horizontal-margin) * 2));}
+  .grid-4 {width: calc(var(--grid-width) * 4 + (var(--horizontal-margin) * 3));}
+  .grid-5 {width: calc(var(--grid-width) * 5 + (var(--horizontal-margin) * 4));}
+  .grid-6 {width: 100%;}
+}
+@media ( max-width: 1023px) {
+  .modal {width: calc(100% - var(--horizontal-margin) * 6);}
+  .container {max-width: calc(100% - var(--horizontal-margin) * 2);}
+}
+@media (min-width: 1024px) {
+  .modal {width: calc(1024px - var(--horizontal-margin) * 6);}
+  .container {max-width: calc(1024px - var(--horizontal-margin) * 2);}
+}
+
+/*————————————————————————————————*/
+/* Form */
+/*————————————————————————————————*/
+input, textarea, select, button {
+  padding: 0 calc(var(--base-line-height) / 4);
+}
+input[type='text'], input[type='search'], input[type='tel'], input[type='url'], input[type='email'], input[type='password'], input[type='datetime'], input[type='date'], input[type='month'], input[type='week'], input[type='time'], input[type='datetime-local'], input[type='number'], input[type='range'], input[type='color'] {
+  width: 100%;
+}
+textarea {
+  width: 100%;
+  height: calc(var(--base-line-height) * 4);
+}

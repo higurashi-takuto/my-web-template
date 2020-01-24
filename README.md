@@ -1,6 +1,18 @@
 # my-web-template
 Web用のテンプレート置き場
 
+## merged
+いろいろ詰め込んだ CSS
+
+- ダークモード
+- バーティカルグリッド
+- ホリゾンタルグリッド
+- モーダル
+- （タイポグラフィ）
+
+[テンプレート](https://higurashi-takuto.github.io/my-web-template/merged/template.html)
+[詳細](merged/README.md)
+
 ## css
 いろいろな　CSS
 
