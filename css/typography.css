@@ -1,0 +1,194 @@
+/* Variable */
+:root {
+  --base-font-size: 16px;
+  --base-line-height: calc(var(--base-font-size) * 2);
+  --accent-color: #f24;
+  --attention-color: #4f2;
+  --link-color: #24f;
+}
+
+/* In Font */
+html {
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  font-family: sans-serif;
+  vertical-align: bottom;
+}
+
+*:not(html) {
+  font-style: inherit;
+  font-variant: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  text-align: inherit;
+  vertical-align: inherit;
+}
+
+
+/* Weight Bold */
+h1, h2, h3, h4, h5, h6, dt, a, b, samp, strong, var, th {
+  font-weight: bold;
+}
+
+/* Style Italic */
+abbr, cite, dfn, em, i, q, var {
+  font-style: italic;
+}
+
+/* Family Monospace */
+pre, code, kbd, samp, time, var, output {
+  font-family: monospace;
+}
+
+h1 {
+  font-size: calc(var(--base-font-size) * 4.0000000000);
+  line-height: calc(var(--base-line-height) * 2);
+}
+
+h2 {
+  font-size: calc(var(--base-font-size) * 3.1748021039);
+  line-height: calc(var(--base-line-height) * 2);
+}
+
+h3 {
+  font-size: calc(var(--base-font-size) * 2.5198420998);
+  line-height: calc(var(--base-line-height) * 2);
+}
+
+h4 {
+  font-size: calc(var(--base-font-size) * 2.0000000000);
+  line-height: var(--base-line-height);
+}
+
+h5 {
+  font-size: calc(var(--base-font-size) * 1.5874010520);
+  line-height: var(--base-line-height);
+}
+
+h6 {
+  font-size: calc(var(--base-font-size) * 1.2599210499);
+  line-height: var(--base-line-height);
+}
+
+blockquote {
+  border-left: calc(var(--base-font-size) / 8) solid;
+  padding-left: calc(var(--base-font-size) * 7 / 16);
+  margin-left: calc(var(--base-font-size) * 7 / 16);
+}
+
+figure {
+  text-align: center;
+}
+
+hr {
+  background-clip: content-box;
+  background-color: black;
+  border: none;
+  height: 1px;
+  padding: calc(var(--base-line-height) / 2 - 0.5px) 0;
+}
+
+li {
+  list-style-position: inside;
+}
+
+ul li {
+  list-style-type: disc;
+}
+
+ol li {
+  list-style-type: decimal;
+}
+
+ul ul, ol ul, ul ol, ol ol {
+  margin-left: var(--base-font-size);
+}
+
+pre {
+  white-space: pre;
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+abbr:hover:after {
+  content: ' ( ' attr(title) ' ) ';
+}
+
+bdi {
+  unicode-bidi: isolate-override;
+}
+
+bdo {
+  unicode-bidi: bidi-override;
+}
+
+data:hover:after {
+  content: ' ( ' attr(value) ' ) ';
+}
+
+kbd {
+  border: 1px solid;
+  border-radius: calc(var(--base-font-size) / 4);
+}
+
+mark {
+  background-color: var(--attention-color);
+}
+
+q:before {
+  content: '“';
+}
+
+q:after {
+  content: '”';
+}
+
+ruby > rt {
+  display: block;
+  font-size: calc(100% / 1.5874010520);
+  text-align: start;
+}
+ruby > rp {
+  display: none;
+}
+
+s, del {
+  text-decoration: line-through;
+}
+
+small {
+  font-size: calc(100% / 1.2599210499);
+}
+
+strong {
+  color: var(--accent-color);
+}
+
+sub {
+  font-size: calc(100% / 1.5874010520);
+  vertical-align: bottom;
+  bottom: -0.5em;
+  position: relative;
+}
+
+sup {
+  font-size: calc(100% / 1.5874010520);
+  vertical-align: top;
+  top: -0.5em;
+  position: relative;
+}
+
+u {
+  text-decoration: underline;
+}
