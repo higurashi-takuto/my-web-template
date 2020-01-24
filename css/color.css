@@ -1,0 +1,60 @@
+/* Variable */
+:root {
+  --color: #333;
+  --dark-color: #ccc;
+
+  --bg-color: #eee;
+  --dark-bg-color: #111;
+
+  --light-gray-color: #ddd;
+  --dark-gray-color: #222;
+}
+
+/* Defaults */
+* {
+  border-color: var(--color);
+}
+html {
+  color: var(--color);
+  background-color: var(--bg-color);
+}
+hr {
+  background-color: var(--base-color);
+}
+pre, code {
+  background-color: var(--light-gray-color);
+}
+
+/* Light mode */
+@media(prefers-color-scheme: light) {
+  * {
+    border-color: var(--color);
+  }
+  html {
+    color: var(--color);
+    background-color: var(--bg-color);
+  }
+  hr {
+    background-color: var(--base-color);
+  }
+  pre, code {
+    background-color: var(--light-gray-color);
+  }
+}
+
+/* Dark mode */
+@media(prefers-color-scheme: dark) {
+  * {
+    border-color: var(--dark-color);
+  }
+  html {
+    color: var(--dark-color);
+    background-color: var(--dark-bg-color);
+  }
+  hr {
+    background-color: var(--dark-color);
+  }
+  pre, code {
+    background-color: var(--dark-gray-color);
+  }
+}
