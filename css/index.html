@@ -18,6 +18,7 @@
   <link rel="stylesheet" type="text/css" href="./color.css">
   <link rel="stylesheet" type="text/css" href="./horizontal.css">
   <link rel="stylesheet" type="text/css" href="./modal.css">
+  <link rel="stylesheet" type="text/css" href="./form.css">
 
   <style>
     html {
@@ -168,10 +169,10 @@
   <pre><code>print('これは pre code')</code></pre>
   <p>文章<a href="#">リンク a</a>文章<abbr title="Cascading Style Sheets">CSS</abbr>文章<b>ボールド b</b><bdi>これは bdi</bdi>文章<bdo dir="ltr">bdo ltr</bdo>ここで改行<br>文章<cite>参照元 cite</cite>文章<code>code a = 1</code>文章<data value="123">data</data>文章<dfn>定義 dfn</dfn>文章<em>強調 em</em>文章<i>イタリック i</i>文章<kbd>Command kbd</kbd>文章<mark>mark</mark>文章<q>引用 q</q><s>取り消しせん s</s>文章<samp>samp Press Enter to continue</samp>文章<small>小さく small<small>より小さく</small></small>文章<span>特になし span</span>文章<strong>ストロング strong</strong>文章<sub>下付き sub</sub>文章<sup>上付き sup</sup>文章<time>2020年12月31日 24:00</time>文章<u>アンダーライン u</u>文章<var>変数 i</var>文章<wbr>任意改行</p>
 
-  <p>
+<!--   <p>
     ルビでズレが生じる
     <ruby><rb>漢</rb><rp>(</rp><rt>かん</rt><rp>)</rp><rb>字</rb><rp>(</rp><rt>じ</rt><rp>)</rp><rbc><rb>漢</rb><rp>(</rp><rt>かん</rt><rp>)</rp><rb>字</rb><rp>(</rp><rt>じ</rt><rp>)</rp></rbc></ruby>
-  </p>
+  </p> -->
 
   <details>
     <summary>詳細</summary>
@@ -179,6 +180,32 @@
   </details>
 
   <form>
+    <p>お客様の情報をご記載下さい。</p>
+    <label for="name" name="name">名前</label>
+    <input id="name" type="text">
+    <label for="e-mail">メール</label>
+    <input id="e-mail" type="email" name="email">
+    <label for="message">本文</label>
+    <textarea rows="4" id="message" placeholder="ご意見をお寄せ下さい。" name="comment"></textarea>
+    <label><input type="radio" name="source">友達から聞いた</label><br>
+    <label><input type="radio" name="source">CMを見た</label><br>
+    <label><input type="radio" name="source">ネット広告を見た</label>
+
+    <label><input type="checkbox" name="magazine">メルマガを希望する</label>
+    <fieldset>
+      <legend>フィールド</legend>
+      <select>
+        <option>選択肢1</option>
+        <option>選択肢2</option>
+        <option>選択肢3</option>
+      </select>
+    </fieldset>
+    <input type="file" name="file">
+    <input type="submit">
+    <button>ボタン</button>
+  </form>
+
+  <!-- <form>
     <label>ラベル</label>
     <datalist>
       <option>選択肢1</option>
@@ -202,7 +229,7 @@
       <option>選択肢3</option>
     </select>
     <textarea></textarea>
-  </form>
+  </form> -->
 
   <h1>これは h1</h1>
   <h2>これは h2</h2>

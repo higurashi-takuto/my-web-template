@@ -8,6 +8,8 @@
 
   --light-gray-color: #ddd;
   --dark-gray-color: #222;
+
+  --link-color: #24f;
 }
 
 /* Defaults */
@@ -21,11 +23,15 @@ html {
 hr {
   background-color: var(--base-color);
 }
-pre, code {
+pre, code, input, textarea, select {
   background-color: var(--light-gray-color);
 }
 ::selection {
   background-color: var(--dark-gray-color);
+}
+button, input[type='submit'] {
+  color: var(--dark-color);
+  background-color: var(--link-color);
 }
 
 /* Light mode */
@@ -40,7 +46,7 @@ pre, code {
   hr {
     background-color: var(--base-color);
   }
-  pre, code {
+  pre, code, input, textarea, select {
     background-color: var(--light-gray-color);
   }
   ::selection {
@@ -61,7 +67,7 @@ pre, code {
   hr {
     background-color: var(--dark-color);
   }
-  pre, code {
+  pre, code, input, textarea, select {
     background-color: var(--dark-gray-color);
   }
   ::selection {
