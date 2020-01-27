@@ -219,6 +219,7 @@ html {
   text-align: inherit;
   vertical-align: inherit;
   color: inherit;
+  cursor: inherit;
 }
 h1, h2, h3, h4, h5, h6, dt, a, b, samp, strong, var, th {
   font-weight: bold;
@@ -288,6 +289,9 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+a, button {
+  cursor: pointer;
 }
 abbr:hover:after {
   content: ' ( ' attr(title) ' ) ';
@@ -473,9 +477,10 @@ input, textarea, select, button {
   padding: 0 calc(var(--base-line-height) / 4);
 }
 input[type='text'], input[type='search'], input[type='tel'], input[type='url'], input[type='email'], input[type='password'], input[type='datetime'], input[type='date'], input[type='month'], input[type='week'], input[type='time'], input[type='datetime-local'], input[type='number'], input[type='range'], input[type='color'] {
-  width: 100%;
+  width: calc(100% - (var(--base-line-height) / 2));
 }
 textarea {
-  width: 100%;
+  width: calc(100% - (var(--base-line-height) / 2));
   height: calc(var(--base-line-height) * 4);
 }
+

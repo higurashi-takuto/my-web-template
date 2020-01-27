@@ -9,10 +9,10 @@ input, textarea, select, button {
 }
 
 input[type='text'], input[type='search'], input[type='tel'], input[type='url'], input[type='email'], input[type='password'], input[type='datetime'], input[type='date'], input[type='month'], input[type='week'], input[type='time'], input[type='datetime-local'], input[type='number'], input[type='range'], input[type='color'] {
-  width: 100%;
+  width: calc(100% - (var(--base-line-height) / 2));
 }
 
 textarea {
-  width: 100%;
+  width: calc(100% - (var(--base-line-height) / 2));
   height: calc(var(--base-line-height) * 4);
 }
