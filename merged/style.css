@@ -80,8 +80,8 @@ tr {
 /* Color */
 /*————————————————————————————————*/
 * {
-  border-color: var(--color);
-}
+    border-color: var(--color);
+  }
 html {
   color: var(--color);
   background-color: var(--bg-color);
@@ -94,10 +94,10 @@ pre, code, input, textarea, select {
 }
 ::selection {
   background-color: var(--dark-gray-color);
+  color: var(--light-gray-color);
 }
-button, input[type='submit'] {
-  color: var(--dark-color);
-  background-color: var(--link-color);
+.modal, .modal-bg:after {
+  background-color: var(--bg-color);
 }
 /* Light mode */
 @media(prefers-color-scheme: light) {
